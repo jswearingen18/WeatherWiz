@@ -1,0 +1,13 @@
+header {
+    background: linear-gradient(to right,  green,blue);
+    text-align: center;
+    font-size: 50px;
+    margin: 0px;
+    padding: 0px;
+    color: azure;
+}
+.searchBox {
+margin-top: 20px;
+margin-left: 20px;
+border: solid 1px black;
+}
