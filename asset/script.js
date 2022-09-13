@@ -10,6 +10,8 @@ var searchBtn = document.getElementById("myBtn");
 var temp = document.getElementById("temp");
 var weather = document.getElementById("weather");
 var icon = document.getElementById("icon");
+var wind = document.getElementById("wind");
+var humidity = document.getElementById("humidity");
 // Function to fetch data using openweather API
    function getWeather () {
     const userInput = searchEl.value;
@@ -21,11 +23,12 @@ fetch(weatherApi)
 })
 // Then statement to display data after you have searched for a city
 .then (function (data) {
-    icon.innerHTML = data.weather[0].icon;
-    temp.innerHTML = "Temperature: " + data.main.temp;
+    icon.innerHTML = "City: " + data.name;
+    temp.innerHTML = "Temperature: " + data.main.temp + "℉";
     console.log(data);
     weather.innerHTML ="Weather: " + data.weather[0].description;
-
+    wind.innerHTML="Wind Speed: " + data.wind.speed + " MPH";
+    humidity.innerHTML="Humidity: " + data.main.humidity + "%";
 })
 }
 // Event listener to run the get weather function
